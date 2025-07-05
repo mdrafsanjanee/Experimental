@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project-1</title>
+</head>
+<style>
+    body{
+        margin:0px;
+        paddig:0px;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size: 100% 100%;
+    }
+    a{
+        color:white;
+        font-size:19px;
+    }
+    .wrapper{
+       backdrop-filter:blur(10px);
+    }
+    img{
+        border-radius:15px;
+        width: 30%;
+    }
+    section{
+        color:white;
+    }
+    p{
+        color:white;
+    }
+    </style>
+    <script>  
+    function checkStudentStatus(){
+        var selectedOption = document.querySelector("select").value;
+        if (selectedOption === "yes") {
+            alert("Assalamualaikum! Glad to have you!");
+            window.location.href = "Contacts.html";
+        }
+        else{
+            alert(" Assalamualaikum! We would love to have you!");
+            window.location.href = "Credits.html";
+        }
+    }
+</script>
+<body background="GOTWALL.jpg">
+    <div class="wrapper">
+        <a href="https://facebook.com/groups/imranict/"><img src="fb.png" alt="Logo" style="height:70px; width:70px;border-radius:50%;float:left;"></a>
+        <div class="nav"style="display:flex;justify-content:right;align-items:right;min-height:80px;">
+            <nav class="optn">
+            <a href="home.html">Home</a>
+            <a href="Credits.html">About</a>
+            <a href="Contacts.html">Contacts</a>
+            <a href="Credits.html">Credit</a>
+            <a href="index.html"><button class="Login.btn" style="margin:10px 10px 0 0; height:35px;width:">Login</button></a>
+            </nav>
+        </div>
+    </div>
+    <hr style="margin:0px 10px;">
+    <div style="display:flex; justify-content:center;align-items:center;">
+    <div style="width:70%;float:left;color:white; background-color: transparent;"> Hi
+            
+    
+    <h2>Are you a member?</h2>
+    <select onchange="checkStudentStatus()">
+    <option value="">Are you a Member?</option>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select>
+    </div>
+    </div>
+<marquee style="color:white;">All rights reserved to Project-1 Team</marquee>
+   
+</body>
+</html>
