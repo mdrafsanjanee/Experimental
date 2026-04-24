@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DB Project-1</title>
+    <title>RJ Project-1</title>
 </head>
 <style>
     body{
@@ -42,17 +42,23 @@
             window.location.href = "Credits.html";
         }
 
-        <button id="loginBtn" onclick="goToLogin()">Log In</button>
+        window.onload = function () {
+        const btn = document.getElementById("loginBtn");
 
-    <script>
-    function goToLogin() {
         if (localStorage.getItem("loggedIn") === "true") {
-        alert("Already logged in");
-        } 
-        else {
-        window.location.href = "login.html";
+            btn.textContent = "Logged In";
+            btn.style.background = "green";
             }
-    }
+        };
+        
+        function handleLogin() {
+            if (localStorage.getItem("loggedIn") === "true") {
+                alert("You are already logged in");
+                } 
+            else {
+                    window.location.href = "login.html";
+                }
+            }
 
         function logout() {
         localStorage.removeItem("loggedIn");
@@ -69,9 +75,9 @@
             <a href="Credits.html">About</a>
             <a href="Contacts.html">Contacts</a>
             <a href="Credits.html">Credit</a>
-            <a href="index.html"><button class="Login.btn" style="margin:10px 10px 0 0; height:35px;width:">Login</button></a>
+            <button id="loginBtn" onclick="goToLogin()"  style="margin:10px 10px 0 0; height:35px;width:" >Log In</button>
             </nav>
-        </div>
+            </div>
     </div>
     <hr style="margin:0px 10px;">
     <div style="display:flex; justify-content:center;align-items:center;">
@@ -83,9 +89,10 @@
     <option value="yes">Yes</option>
     <option value="no">No</option>
 </select>
+        // didn't code the log out button yet
     </div>
     </div>
-<marquee style="color:white;">All rights reserved to Project-1 Team</marquee>
+<marquee style="color:white;">All rights reserved to RJ Project-1</marquee>
    
 </body>
 </html>
