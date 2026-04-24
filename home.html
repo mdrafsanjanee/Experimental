@@ -41,6 +41,23 @@
             alert(" Assalamualaikum! We would love to have you!");
             window.location.href = "Credits.html";
         }
+
+        <button id="loginBtn" onclick="goToLogin()">Log In</button>
+
+    <script>
+    function goToLogin() {
+        if (localStorage.getItem("loggedIn") === "true") {
+        alert("Already logged in");
+        } 
+        else {
+        window.location.href = "login.html";
+            }
+    }
+
+        function logout() {
+        localStorage.removeItem("loggedIn");
+        location.reload();
+        }
     }
 </script>
 <body background="Images/Bg-bricks.jpg">
