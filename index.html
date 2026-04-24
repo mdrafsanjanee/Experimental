@@ -81,7 +81,7 @@
     var password = document.getElementById("password").value;
 
     if (username === "Youdontknow?" && password === "8080") {
-        alert("Valid");
+        localStorage.setItem("loggedIn", "true");
         window.location.href="home.html";
     } else {
         alert("Invalid");
